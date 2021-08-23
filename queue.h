@@ -37,7 +37,7 @@ int enqueue(struct QUEUE **queue,  struct DATA data);
 int dequeue(struct QUEUE **queue, struct DATA *data);
 
 // The prototypes of additional functions to work with a stack.
-struct QUEUE * create_queue(const int length);
+struct QUEUE *create_queue(const size_t length);
 void delete_queue(struct QUEUE *queue);
 int queue_is_empty(struct QUEUE *queue);
 uint32_t get_item_count(struct QUEUE *queue);

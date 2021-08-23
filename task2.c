@@ -54,7 +54,7 @@ void run_demo(void)
         }
 
         printf("\nCalling get_stack_size() function.\n");
-        printf("Stack contains %d elements.\n", get_stack_size(&stack));
+        printf("Stack contains %ld elements.\n", get_stack_size(&stack));
 
         printf("\nCalling peek() function for 2 times.\n");
         printf("%d\n", peek(&stack).value);
@@ -62,7 +62,7 @@ void run_demo(void)
 
 
         printf("\nCalling get_stack_size() function.\n");
-        printf("Stack contains %d elements.\n", get_stack_size(&stack));
+        printf("Stack contains %ld elements.\n", get_stack_size(&stack));
 
         printf("\nCalling pop() function until the stack is empty.\n");
         while(is_empty(&stack) != STACK_IS_EMPTY){
@@ -70,7 +70,7 @@ void run_demo(void)
         }
 
         printf("\nCalling get_stack_size() function.\n");
-        printf("Stack contains %d elements.\n", get_stack_size(&stack));
+        printf("Stack contains %ld elements.\n", get_stack_size(&stack));
 
         printf("\nCalling is_empty() function to check if the stack is empty.\n");
         if(is_empty(&stack) == STACK_IS_EMPTY){
@@ -93,13 +93,13 @@ void run_demo(void)
         }
         
         printf("\nCalling get_stack_size() function.\n");
-        printf("Stack contains %d elements.\n", get_stack_size(&stack));
+        printf("Stack contains %ld elements.\n", get_stack_size(&stack));
 
         printf("\nCalling clear_stack() function\n");
         clear_stack(&stack);
 
         printf("\nCalling get_stack_size() function.\n");
-        printf("Stack contains %d elements.\n", get_stack_size(&stack));
+        printf("Stack contains %ld elements.\n", get_stack_size(&stack));
 
         printf("\nCalling is_empty() function to check if the stack is empty.\n");
         if(is_empty(&stack) == STACK_IS_EMPTY){

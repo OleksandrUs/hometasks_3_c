@@ -36,10 +36,19 @@ int main(int argc, char *argv[])
 void run_demo(void)
 {
         const size_t QUEUE_LENGTH = 10;
+        struct QUEUE * queue = NULL;
 
         // Create queue
-        struct QUEUE *queue = create_queue(QUEUE_LENGTH);
-       
+        queue = create_queue(QUEUE_LENGTH);
+        if(queue == NULL){
+                printf("Error creating queue!\n");
+                return;
+        }
+
+
+        // Get the number of items in the queue (should be 5) 
+        printf("Number of items in the queue: %d\n", get_item_count(queue));
+        
         // Insert 5 items into the queue 
         struct DATA data;
         for(int i = 0; i < 5; i++){
@@ -61,6 +70,24 @@ void run_demo(void)
 
         // Get the number of items in the queue (should be 5) 
         printf("Number of items in the queue: %d\n", get_item_count(queue));
-        
+
+        // Insert elements until queue is not full
+        data.value = 11;
+        while(enqueue(&queue, data) == TRUE){
+                printf("Value %d inserted into the queue.\n", data.value);
+                data.value++;
+        }
+
+        // Get the number of items in the queue (should be 5) 
+        printf("Number of items in the queue: %d\n", get_item_count(queue));
+
+        // Dequeue elements untis queue is not empty
+        while(dequeue(&queue, &data) == TRUE){
+                printf("Value %d extracted from the queue.\n", data.value);
+        }
+
+        // Get the number of items in the queue (should be 5) 
+        printf("Number of items in the queue: %d\n", get_item_count(queue));
+
         delete_queue(queue);
 }

@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "queue.h"
 
-int enqueue(struct QUEUE **queue,  struct DATA data)
+int enqueue(struct QUEUE **queue, struct DATA data)
 {
         int status = FALSE;
         if((queue != NULL) && ((*queue) != NULL)) {
@@ -43,12 +43,13 @@ int dequeue(struct QUEUE **queue, struct DATA *data)
          return status;
 }
 
-struct QUEUE * create_queue(const int length)
+struct QUEUE *create_queue(const size_t length)
 {
-        struct QUEUE *queue = NULL;
+        struct QUEUE *queue;
         if(length > 0)
         {
-                queue = malloc(length * sizeof(struct DATA));
+                queue = (struct QUEUE *)malloc(sizeof(struct QUEUE));
+                queue->data = malloc(length * sizeof(struct DATA));
                 queue->start = length - 1;
                 queue->end = queue->start;
                 queue->length = length;

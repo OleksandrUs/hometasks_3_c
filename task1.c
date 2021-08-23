@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
         dest_str = copy_string(src_str);
 
         if(dest_str != NULL){
-                printf("SOURCE STRING: \"%s\", LENGTH=%d\n", src_str, get_str_length(src_str));
-                printf("COPIED STRING: \"%s\", LENGTH=%d\n", dest_str, get_str_length(dest_str));
+                printf("SOURCE STRING: \"%s\", LENGTH=%ld\n", src_str, get_str_length(src_str));
+                printf("COPIED STRING: \"%s\", LENGTH=%ld\n", dest_str, get_str_length(dest_str));
                 free(dest_str);
         } else {
                 printf("An error occured while copying string!\n");

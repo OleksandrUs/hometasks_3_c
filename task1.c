@@ -13,7 +13,7 @@
 #include <stdlib.h>
 
 /*
- * These identifier is used as a code to identify whether a function call was successfull
+ * This identifier is used as a code to identify whether a function call was successfull
  * or an error occured.
  */
 #define STR_ERR -1

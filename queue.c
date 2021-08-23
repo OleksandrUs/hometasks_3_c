@@ -49,7 +49,7 @@ struct QUEUE *create_queue(const size_t length)
         if(length > 0)
         {
                 queue = (struct QUEUE *)malloc(sizeof(struct QUEUE));
-                queue->data = malloc(length * sizeof(struct DATA));
+                queue->data = (struct DATA *)malloc(length * sizeof(struct DATA));
                 queue->start = length - 1;
                 queue->end = queue->start;
                 queue->length = length;

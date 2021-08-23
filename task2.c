@@ -13,7 +13,7 @@
 /*
  * Function prototype.
  */
-void run_demo();
+void run_demo(void);
 
 /*
  * The main function of the program.
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
  * This function demonstrates the usage of the stack library functions and prints
  * the results of their callings and some additional information in the console window. 
  */
-void run_demo()
+void run_demo(void)
 {
         struct STACK *stack = NULL;
         struct DATA data;

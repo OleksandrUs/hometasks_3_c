@@ -11,7 +11,7 @@
 
 /*
  * The function adds a new element to the stack and this element becomes
- * the head of the stack. The memory for storing the new element allocates
+ * the head of the stack. The memory for storing the new element is allocated
  * dynamically.
  * 
  * @param stack is the pointer to the pointer to the head of the stack

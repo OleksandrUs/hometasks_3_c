@@ -11,6 +11,9 @@
 
 #include <stdint.h>
 
+/*
+ * These identifiers are used as codes to identify the result of function execution.
+ */
 #define TRUE 1
 #define FALSE 0
 
@@ -23,17 +26,26 @@ struct DATA
         int value;
 };
 
+/*
+ * This data structure is used to describe a queue.
+ */
 struct QUEUE
 {
+        // The pointer to the dynamically allocated array of instances of DATA structure
+        // that contains data.
         struct DATA *data;
+        // The index of the head (first element) of the queue.
         uint32_t start;
+        // The index of the tail (last element) of the queue.
         uint32_t end;
+        // The quantity of items that are in the queue.
         uint32_t item_count;
+        // The maximum length of the queue.
         size_t length;
 };
 
 // The prototypes of base functions to work with a stack.
-int enqueue(struct QUEUE **queue,  struct DATA data);
+int enqueue(struct QUEUE **queue, struct DATA data);
 int dequeue(struct QUEUE **queue, struct DATA *data);
 
 // The prototypes of additional functions to work with a stack.

@@ -19,7 +19,7 @@
  */
 void push(struct STACK **stack, struct DATA data)
 {
-        if(*stack == NULL){
+        if(*stack == NULL) {
                 *stack = malloc(sizeof(struct STACK));
                 (*stack)->next = NULL;
                 (*stack)->data = data;
@@ -44,7 +44,7 @@ struct DATA pop(struct STACK **stack)
 {
         struct DATA data = {0};
 
-        if((stack != NULL) && ((*stack) != NULL)){
+        if((stack != NULL) && ((*stack) != NULL)) {
                 data = (*stack)->data;
                 struct STACK *temp = (*stack);
                 (*stack) = (*stack)->next;
@@ -81,7 +81,7 @@ struct DATA peek(struct STACK **stack)
 {
         struct DATA data = {0};
 
-        if((stack != NULL) && ((*stack) != NULL)){
+        if((stack != NULL) && ((*stack) != NULL)) {
                 data = (*stack)->data;
         }
        
@@ -98,7 +98,7 @@ size_t get_stack_size(struct STACK **stack)
 {
         size_t size = 0;
         struct STACK *head = *stack;
-        while(head != NULL){
+        while(head != NULL) {
                 size++;
                 head = head->next;
         }
@@ -114,8 +114,8 @@ size_t get_stack_size(struct STACK **stack)
  */
 void clear_stack(struct STACK **stack)
 {
-        if((stack != NULL) && ((*stack) != NULL)){
-                while(is_empty(stack) != STACK_IS_EMPTY){
+        if((stack != NULL) && ((*stack) != NULL)) {
+                while(is_empty(stack) != STACK_IS_EMPTY) {
                         pop(stack);
                 }
         }

@@ -25,7 +25,7 @@ gcc 8.1.0
 ``gcc task1.c -o task1``<br>
 ``gcc task2.c stack.c -o task2``<br>
 ``gcc task3.c queue.c -o task3``<br>
-``gcc task4.c -o task4``<br>
+``gcc task4.c -lm -o task4``<br>
 
 **Run the program in Terminal**
 - To run the specific program run one of the commands in 'Terminal' from the root project directory:<br>

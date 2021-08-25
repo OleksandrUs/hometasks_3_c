@@ -165,7 +165,7 @@ void run_demo_1(void)
          
         // Print all elements of the original array.
         printf("\n\n=======The \"map\" function modifies all items in the existing array.=======\n");
-        printf("\nPrint all items that are in the array.\n");
+        printf("\nPrint all items that are in the original array.\n");
         map(array, ARRAY_SIZE, print_item, modify_array);
 
         // Invert the sing of the each element in the array. 
@@ -184,7 +184,7 @@ void run_demo_1(void)
         map(array, ARRAY_SIZE, print_item, modify_array);
         
         // Print all elements of the original array.
-        printf("\n\nPrint all items that are in the source array (the elements was modified).\n");
+        printf("\n\nPrint all items that are in the original array (the elements were modified).\n");
         map(array, ARRAY_SIZE, print_item, modify_array);
 }
 
@@ -201,7 +201,7 @@ void run_demo_2(void)
         
         // Print all elements of the original array.
         printf("\n\n=======The \"map\" function returns the new array with modified items.=======\n");
-        printf("\nPrint all items that are in the source array.\n");
+        printf("\nPrint all items that are in the original array.\n");
         map(src_array, ARRAY_SIZE, print_item, modify_array);
 
         // Invert the sing of the each element in the array and put it in the new one. 
@@ -223,6 +223,6 @@ void run_demo_2(void)
         free(new_array);
 
         // Print all elements of the original array.
-        printf("\n\nPrint all items that are in the source array (elements wasn't modified).\n");
+        printf("\n\nPrint all items that are in the original array (elements weren't modified).\n");
         map(src_array, ARRAY_SIZE, print_item, modify_array);
 }
